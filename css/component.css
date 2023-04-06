@@ -1,0 +1,237 @@
+/* Accordion style */
+.cbp-ntaccordion {
+	list-style: none;
+	margin: 0;
+	padding: 0;}
+
+.cbp-ntsubaccordion {list-style: none; margin-top: 40px!important;}
+.cbp-ntaccordion .cbp-nttrigger {cursor: pointer;} 
+
+.cbp-ntaccordion h3 {
+	margin: 0 0 0.3em;
+    font-size: 1.3em;
+    height: 60px;
+    line-height: 60px;
+    background: #ecece8;
+    overflow: hidden;
+    color: #555555;
+    text-transform: uppercase;}
+
+.cbp-ntaccordion h4 {
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	margin: 0 0 0.5em;
+	height: 40px;
+    line-height: 40px;
+	overflow: hidden;}
+
+.cbp-ntaccordion h5 {
+	font-size: 1em;
+	padding-left: 2.1em;
+	margin: 0 0 0.5em;
+	height: 40px;
+	color: rgba(51,51,51,0.8);
+    line-height: 40px;
+	overflow: hidden;}
+
+@media (min-width: 280px) and (max-width: 767px) {
+	.cbp-ntaccordion h3{
+		font-size: 95%;
+		height: 40px;
+    	line-height: 40px;}
+
+    .cbp-ntaccordion h4 {
+		font-size: 95%;
+		height: 30px;
+	    line-height: 30px;}
+}
+
+/* Arrow icons */
+.cbp-ntaccordion > li > .cbp-nttrigger:before{
+	display: block;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 0.5em;
+	background: #e1e1df;}
+
+.cbp-ntsubaccordion > li > .cbp-nttrigger:before{
+	display: block;
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 0.5em;}
+
+.cbp-ntaccordion > li > .cbp-nttrigger:before {
+	content: url("../img/iconos/flechaBcaFrente.png");}
+
+.cbp-ntaccordion > li > .cbp-nttrigger:hover:before {
+	content: url("../img/iconos/flechaBcaFrente.png");}
+
+.cbp-ntaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
+.no-js .cbp-ntaccordion > li > .cbp-nttrigger:before {
+	content: url("../img/iconos/flechaBcaAbajo.png"); background: #f44e5e;}
+
+.cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+	content: url("../img/iconos/flechaFrenteCh.png");}
+
+.cbp-ntsubaccordion > li > .cbp-nttrigger:hover:before {
+	content: url("../img/iconos/flechaFrenteCh.png");}
+
+.cbp-ntsubaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
+.no-js .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+	content: url("../img/iconos/flechaAbajoCh.png");}
+
+/* Initial height is zero */
+.cbp-ntaccordion .cbp-ntcontent {
+	height: 0;
+	overflow: hidden;}
+
+/* When open, set height to auto */
+.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
+.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
+.no-js .cbp-ntaccordion .cbp-ntcontent {
+	padding: 30px 45px 30px 45px;
+    background: #f9f9f8; 
+	height: auto;
+	margin-bottom: 10px;}
+
+.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontentA{padding: 30px 15px!important;}
+
+@media (min-width: 280px) and (max-width: 767px) {
+	.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
+	.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
+	.no-js .cbp-ntaccordion .cbp-ntcontent {padding: 30px;}
+
+	.cbp-ntaccordion > li > .cbp-nttrigger:before{
+	width: 40px;
+	height: 40px;}
+
+	.cbp-ntsubaccordion > li > .cbp-nttrigger:before{
+	width: 30px;
+	height: 30px;}
+
+	.cbp-ntaccordion > li > .cbp-nttrigger:before {
+	content: url("../img/iconos/flechaBcaFrente480.png");}
+
+	.cbp-ntaccordion > li > .cbp-nttrigger:hover:before {
+		content: url("../img/iconos/flechaBcaFrente480.png");}
+
+	.cbp-ntaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
+	.no-js .cbp-ntaccordion > li > .cbp-nttrigger:before {
+		content: url("../img/iconos/flechaBcaAbajo480.png"); background: #f44e5e;}
+
+	.cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+	content: url("../img/iconos/flechaFrenteCh480.png");}
+
+	.cbp-ntsubaccordion > li > .cbp-nttrigger:hover:before {
+		content: url("../img/iconos/flechaFrenteCh480.png");}
+
+	.cbp-ntsubaccordion > li.cbp-ntopen > .cbp-nttrigger:before,
+	.no-js .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
+		content: url("../img/iconos/flechaAbajoCh480.png");}
+
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+	.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
+	.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
+	.no-js .cbp-ntaccordion .cbp-ntcontent {padding: 15px;}
+}
+
+/**/
+.txtPuesto, .Puesto{
+	width: 100%;
+	height: auto;
+	overflow: hidden; 
+	/*margin-bottom: 20px;*/}
+
+.Puesto{margin-bottom: 0;}
+
+.fotoPuesto{
+	width: 150px;
+	height: auto;
+	overflow: hidden;
+	float: left;}
+
+.fotoPuesto figure{
+	width: 120px;
+	height: auto;
+	max-height: 151px;
+	overflow: hidden;
+	margin:0 auto 10px;
+	background: #fff;
+	border: 1px solid #ddd;}
+
+img.fotoOrganigrama{
+	display: block;
+	width: 120px;
+	height: auto;
+	margin: 0 auto;}
+
+.fotoPuesto p{text-align: center;}
+
+a.linkRojo{
+	font-size: 0.9em;
+	width: 130px;
+	height: 20px;
+    float: right;
+    color: #f2152b;
+    background: url(../img/flechaRoja.png) no-repeat center right;}
+
+a.linkRojo:hover{text-decoration: underline;}
+
+/*texto descripcion del puesto*/
+p.descPuesto{
+	display: block;
+    width: 79%;
+    height: auto;
+    max-height: 150px;
+    float: right;
+    overflow: hidden;}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	p.descPuesto{width: 75%;}
+}
+
+@media (min-width: 670px) and (max-width: 767px) {
+	p.descPuesto{width: 70%;}
+}
+
+@media (min-width: 590px) and (max-width: 669px) {
+	p.descPuesto{width: 65%;}
+}
+
+@media (min-width: 280px) and (max-width: 589px) {
+	.fotoPuesto{float: none; margin: 0 auto 20px;}
+	p.descPuesto{width: 100%; float: none; margin-bottom: 20px;}
+	a.linkRojo{margin: 10px auto 0; float: none;}
+}
+
+/*fotos varias*/
+.cbp-Lista{text-align: center;}
+
+.cbp-Lista li{
+	width: 178px;
+    padding: 10px;
+    height: 250px;
+    margin-bottom: 10px;
+	display: inline-block;
+	text-align: center;}
+
+.cbp-Lista li figure{margin-bottom: 10px;}
+
+.cbp-Lista li a.linkRojo{
+	float: none; 
+	margin: 5px auto;
+	font-size: 0.8em;
+	background: inherit;}
+
+.cbp-Lista li small{
+	width: 100%;
+	height: 30px;
+	overflow: hidden;
+	line-height: 12px;
+	text-align: center;}
+

@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+/******************************************* 
+	01. GENERALES
+	02. HEADER / NAV
+	03. FOOTER
+	04. ADMINISTRADOR / HEADER
+  05. ADMINISTRADOR / USUARIOS
+  06. ADMINISTRADOR / FACTURAS
+  08. ADMINISTRADOR / PPREGUNTAS FRECUENTES
+  09*. PROVEEDORES / MIS DATOS
+
+
+****************************************** */
+
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('../fonts/RobotoCondensed-Light-webfont.eot');
+    src: url('../fonts/RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Light-webfont.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../fonts/Ubuntu-Regular.ttf') format('truetype'),
+            font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('../fonts/RobotoCondensed-Bold-webfont.eot');
+    src: url('../fonts/RobotoCondensed-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Bold-webfont.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Bold-webfont.svg#roboto_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/Roboto-Bold-webfont.eot');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+
+
+
+/* 01. GENERALES
+ ****************************************** */
+ body {
+  font-family: "roboto_condensedregular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #424242;}
+
+body.inicio{background-color: #fff;}
+/*.container{width:1170px; margin: 0 auto;}*/
+
+/*titulos*/
+.titLigCond{font-family: "roboto_condensedlight", Helvetica, Arial, sans-serif;}
+.titBoldCond{font-family: "roboto_condensedbold", Helvetica, Arial, sans-serif;}
+
+ul li{list-style: none;}
+a{text-decoration: none;}
+span.separacion{margin: 0 15px;}
+/*fondos*/
+.back_azulMedio{background-color: #01579b;}
+.back_azulClaro{background-color: #0288d1;}
+.back_naranja{background-color: #150921;}
+.back_azulMarino{background-color: #00539f;}
+
+/*tipografias*/
+.azulMedio{color: #01579b;}
+.azulClaro{color: #0288d1;}
+.naranja{color: #4557F6;}
+.bco{color: #000;}
+.bco2{color: #fff;}
+.gris{color: #424242;}
+
+/*tamaño tipografias*/
+.txtCh{font-size: 13px;}
+
+/*formularios*/
+.form-control {
+  display: block;
+  width: 100%;
+  /*height: 30px;*/
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #4557F6;
+  background-image: none;
+  border: 1px solid transparent;}
+
+.btn-lg, .btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3333333;}
+
+input, button, select, textarea {font-family: inherit; color:#fff;}
+.btn:hover{background-color: #4557F6;}
+
+
+/* 02. INDEX / NAV
+ ****************************************** */
+header#headerHome{
+	width: 100%;
+	height: 380px;
+  margin-top: 50px;
+	background-color: #fff;
+  padding: 55px 0;
+  box-sizing:border-box;}
+
+header#headerHome h3{margin-top: 50px; margin-bottom: 0px!important;}
+header#headerHome p{margin: 0;}
+
+.contLogo{
+  display:block;
+  float: left;
+  height: 350px;
+  border-right: 1px dotted #424242;
+  padding-left: 20px;}
+
+.contLogo img.logotipo{
+  display: block;
+  float: right;
+  margin-top: 140px;
+  margin-right: 30px;
+  width: 220px;}
+
+/*recuadro acceso*/
+.contRecuadro{
+  float: right;
+  display:block;
+  height: 350px;
+  padding-left: 45px;
+  box-sizing:border-box;}
+  
+/*form acceso*/
+#acceso label{
+    /*float: left;*/
+    width: 100%;
+    overflow: hidden;
+    line-height: 34px;
+    text-align: left;
+    margin-right: 10px;}
+
+#acceso input{ max-width: 350px;width: 100%}
+span.requeridos{font-size: 11px; float: left; color: #01579b;}
+ul.listForm button{margin-left: 35%;}
+ul.listForm{margin:0 0 0 -40px!important;}
+ul.listForm li{margin: 10px 0px;}
+li.ultimoLi{margin-top: 15px!important;}
+
+/* 03. FOOTER
+ ****************************************** */
+footer{
+  width: 100%;
+  height: 150px;
+  background-color: #150921;
+  padding: 35px 0;
+  box-sizing:border-box;margin-top: 7%;}
+footer p{white-space: pre-line; font-size: 15px; margin: 0px;}
+footer .contFooter{height: 40px; float: left;}
+/*footer #design{width: 550px;}*/
+footer #design span,
+footer #design  a{float: right; margin-top: 7px;}
+footer #design span{margin-right: 7px;}
+
+
+
+/* 04. ADMINISTRADOR / HEADER
+ ****************************************** */
+#headerProv{
+  width: 100%;
+  min-height: 105px;
+  background-color: #fff!important;}
+img.logotipo{margin-top: 12px;}
+#headerProv h4{float: right; margin-top: 30px; font-size: 15px;}
+a.link{text-decoration: underline;}
+a.link:hover{color: #0288d1;}
+p.headerTxt{float: left; font-size: 13px; margin-top: 5px;}
+
+a.linkA{font-size: 13px;}
+
+a.linkB{color: #0288d1; margin-right: 12px; font-size: 14px;}
+a.linkB:hover{color:#fff;}
+
+.pTxt{
+  display: block;
+  height: 15px;
+  float: right;
+  margin-right: 3px;}
+
+#navProv .navbar{margin: 0!important; padding-right: 0px!important;}
+#navProv .navbar-default .navbar-nav > li > a.MenuSec {
+    color: #FFF;
+    background-color: #4557F6;
+    border-left: 1px solid;
+    margin-right: 0px;
+    border-color: rgba(255, 255, 255, 0.3);}
+
+/*a.MenuSecUlt{border-right: 1px solid;}*/
+#navProv .navbar-default .navbar-nav > li > a.MenuSec:hover,
+#navProv .navbar-default .navbar-nav > li > a.MenuSec:focus{color: #00539f; background-color: #f8f8f8;}
+#tituloEmpresa h4{margin-top: 15px!important; padding-left: 0px!important;}
+
+
+/*@media screen and (max-width: 767px){ 
+   button#registro{ float: left!important; margin: 0px 0 20px 0;}
+   #navProv .navbar-default .navbar-nav > li > a.MenuSecUlt{border-right: transparent;}
+}
+*/
+
+/* 05. ADMINISTRADOR / USUARIOS
+ ****************************************** */
+/*tabla general*/
+table.tableGeneral{text-align: center; margin-top: 30px;}
+table.tableGeneral th{font-weight: none!important; font-weight: lighter!important; }
+table.tableGeneral thead tr th{ text-align: center;}
+table.tableGeneral td.centrarCelda{line-height:40px;}
+table.tableGeneral th.thAcciones{width: 110px;}
+table.tableGeneral th.thEmail{width: 450px;}
+table.tableGeneral th.thNombre{width: 310px;}
+
+button.btnAzmed{float: right; margin-top: 30px; margin-left: 10px; background-color: #01579b;}
+button.btnAzmed:hover{background-color: #0288d1; color: #fff!important;}
+img.iconUser{margin-right: 10px;}
+a.link_ver{line-height: 40px;}
+a.link_ver:hover span{color: #ef8d00;}
+
+/*formulario usuarios*/
+input.form-control[type="checkbox"]{
+  width: 18px;
+  height: 18px!important;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;}
+
+input.inputAll[type="checkbox"]{
+  margin: 5px 2px 0 -100px!important; padding: 0px!important;}
+span.controlTxt{margin-top: -25px; display: block;}
+
+span.form-controlTxt{
+  margin-top: -25px;
+  margin-left: 25px;
+  display: block;}
+
+.labelAccesos{height: 150px;}
+.inputAccesos{min-height: 30px; overflow: hidden;}
+
+/*formulario general*/
+#contBtnDatos{min-height: 100px;}
+#contBtnDatos button.btnEnviar{margin-right: 0px!important; float: right!important;}
+#contBtnDatos button[type="reset"]{margin-right: 15px; float: right!important; }
+#contBtnDatos span.requeridos{float: right; margin-right: 20px; line-height: 40px;}
+
+input[type="search"]{margin-top: 30px!important; height: 35px; border-radius: 0px!important;}
+.inputBuscador{float: right;margin-right: -15px!important;}
+button#buscar{float: right; margin-right: 10px;}
+
+/* 06. ADMINISTRADOR / FACTURAS
+ ****************************************** */
+/*filtros calendario*/
+ul.listFormA{margin-right: -20px!important;}
+#formCalendario label{
+  float: left;
+  width: 80px;
+  color: #757575;
+  line-height: 30px;
+  margin-top: 2px;
+  text-align: right;}
+
+#formCalendario label.labelSegundo{width: 50px;}
+
+#formCalendario button.btnFiltar{
+  float: right;
+  margin-right: 30px;
+  margin-top: -2px;
+  padding: 6px 28px;}
+
+#formCalendario button.btnConsultar{
+  float: right;
+  margin-right: 35px;
+  margin-top: -2px;
+  padding: 6px 14.5px;}
+
+input.calendario{width: 100px; float: left; margin: 0 15px;}
+button.btnFacturas{float: right; margin:15px 15px 0 15px;}
+
+/* 07. ADMINISTRADOR / PROVEEDORES
+ ****************************************** */
+select.selectFecha{float: left!important; width: 90px; margin-right: 7px;}
+select.selectFechaA{margin-left: 15px;}
+.inputRadio{display: block; width: 40px; height: auto; float: left; margin-left: 20px;}
+
+
+/* 08. ADMINISTRADOR / PPREGUNTAS FRECUENTES
+ ************************************************** */
+/*tabla preguntas*/
+#tablePreguntas td.txtPregunta{width: 900px; text-align: left; padding-left: 20px; line-height: 25px;}
+#tablePreguntas th.titPregunta{text-align: left; padding-left: 20px;}
+a.link_verA{margin-right: 10px;}
+
+li.liFecha{float: right;}
+
+#tablePreguntas p{white-space: pre-line;}
+span.txtRespuesta{color: #8b8a8a;}
+/*@media screen and (max-width: 767px){ 
+  #formCalendario label{clear: both;}
+  #formCalendario label.labelUltimo,
+  #formCalendario label.labelMedio{clear: both; margin-left: -25px!important;}
+  #formCalendario button.btnEnviar{margin-right: 20px!important;}
+}
+
+ @media screen and (max-device-width: 480px){
+  #formCalendario label.labelMedio, #formCalendario label.labelUltimo{margin-left: -25px!important;}
+  #formCalendario button.btnEnviar{margin-top: 20px!important;}
+}*/
+
+
+/*paginacion*/
+.paginas-number{
+  float:right!important;
+  display: block;
+  width: 155px;
+  height: 40px;}
+
+.paginas-number input{display: block; width: 35px;}
+span.conteo_paginas{line-height: 30px; float: left; margin-right: 20px; font-size: 14px;}
+img.triangulo_pag_izq{display: block; width: 10px; height: 11px; margin: 9px 8px 0 8px; float: left;}
+img.triangulo_pag{display: block; width: 10px; height: 11px; margin: -20px 0 0 5px; float: right;}
+
+/*registrar nueva factura*/
+#RegistroFactura{min-height: 400px;}
+#RegistroFactura form{margin-top: -50px;}
+#RegistroFactura form label.labelUp{margin-top: 40px;}
+#RegistroFactura form label.labelDown{margin-top: 15px;}
+#RegistroFactura span.requeridos{margin-left: 0px;}
+#RegistroFactura input[type="file"]{padding-top: 0px; padding-left: 0px;}
+#RegistroFactura li.liUp{margin-top: 15px;}
+#RegistroFactura button[type="reset"]{margin-right: 15px; }
+
+ @media screen and (max-device-width: 480px) {
+  #tableVisible {display: none !important;}
+  #tableResponsiva{display: block;}
+}
+
+
+/*imagenes banner editar*/
+img.imagenNoticiasA{width: 100%; margin-bottom: 15px;}
+img.imagenNoticiasB{margin-bottom: 15px;}
+/*input colores en header, menu, footer*/
+.form-controlA{width: 20%;}
+
+/*calendario empleados*/
+input.calendarioA{margin: 0!important;}
+a.descargarReg{margin-right: 35px;}

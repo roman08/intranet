@@ -1,0 +1,8 @@
+[15-Mar-2023 12:31:22 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home4/hqy7d2t1/public_html/intranetdirsa/admin/functions/conect.php:178
+Stack trace:
+#0 /home4/hqy7d2t1/public_html/intranetdirsa/admin/functions/conect.php(178): mysqli_connect('127.0.0.1', 'root', '')
+#1 /home4/hqy7d2t1/public_html/intranetdirsa/admin/functions/conect.php(193): Conectarse()
+#2 /home4/hqy7d2t1/public_html/intranetdirsa/admin/functions/conect.php(20): ProcesaQuery('SELECT * FROM i...')
+#3 /home4/hqy7d2t1/public_html/intranetdirsa/login.php(7): Estilos_Colores()
+#4 {main}
+  thrown in /home4/hqy7d2t1/public_html/intranetdirsa/admin/functions/conect.php on line 178
